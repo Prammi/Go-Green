@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://github.com/smalot/bootstrap-datetimepicker/blob/master/css/bootstrap-datetimepicker.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <script type="text/javascript" src="https://github.com/smalot/bootstrap-datetimepicker/blob/master/js/bootstrap-datetimepicker.js"></script>
+
+  
+  <style>
+.addnFilter{
+margin -left:35px;
+border : 1px; solid #DCDCDC;
+background-color:#FFFFF;
+padding:15px;
+}
+  label.required:after {content: " *"; color: red;}
+
+div.addnFilter select{
+display: inline-block;
+
+}
+table ,tr {
+min-height: 25px;
+}
+table ,td {
+padding:5px;
+}
+.tblClass{
+
+}
+/*
+ *  STYLE 4
+ */
+
+#style-4::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: #F5F5F5;
+}
+
+#style-4::-webkit-scrollbar
+{
+	width: 10px;
+	background-color: #F5F5F5;
+}
+
+#style-4::-webkit-scrollbar-thumb
+{
+	background-color: #000000;
+	border: 2px solid #555555;
+}
+.table-fixed thead {
+  width: 97%;
+}
+.table-fixed tbody {
+  height: 350px;
+  overflow-y: auto;
+  width: 99%;
+}
+.table-fixed thead, .table-fixed tbody, .table-fixed tr, .table-fixed td, .table-fixed th {
+  display: block;
+}
+.table-fixed tbody td, .table-fixed thead > tr> th {
+  float: left;
+  border-bottom-width: 0;
+}
+
+
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">WebSiteName</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="#registration">Form</a></li>
+      <li><a href="#CandidateList">Candidate List</a></li>
+      <li><a href="#Stats">Stats</a></li>
+<li><a href="#Reports">Reports</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="container" style="width:1170px;" id="registration">
+  <form>
+    <div class="form-group">
+   <h3> Techincal Round 1</h3>
+      <div style="border :1px solid #DCDCDC ;border-radius:15px" class="well">
+        <div class="row">
+          <div class="col-xs-4">
+            <label class="required" for="ex1">First Name</label>
+            <input class="form-control" id="ex1" type="text" placeHolder="First Name">
+          </div>
+          <div class="col-xs-4">
+            <label for="ex2">Middle Name</label>
+            <input class="form-control" id="ex2" type="text" placeHolder="Middle Name">
+          </div>
+          <div class="col-xs-4">
+            <label  class="required" for="ex3">Last Name</label>
+            <input class="form-control" id="ex3" type="text" placeHolder="Last Name">
+          </div>
+
+        </div>
+
+        </br><div class="row">
+          <div class="col-xs-4">
+            <label class="required" for="ex1">Email</label>
+            <input class="form-control" id="ex1" type="email" placeHolder="Email">
+          </div>
+          <div class="col-xs-3">
+            <label  class="required" for="ex2">Phone Number</label>
+            <input class="form-control" id="ex2" type="text" placeHolder="Phone Number">
+          </div>
+<div class="col-xs-2">
+            <label  class="required" for="ex2">Overall Exp</label>
+            <input class="form-control" id="ex2" type="text" placeHolder="OverAll Exp">
+          </div>
+<div class="col-xs-2">
+            <label  class="required" for="ex2"> Relative Exp</label>
+            <input class="form-control" id="ex2" type="text" placeHolder="Relative Exp">
+          </div>
+        </div>
+        </br><div class="row">
+			<div class="col-xs-3">
+            <label  class="required" for="ex1">Interviewed By</label>
+            <input class="form-control" id="ex2" type="text" placeHolder="Alias Number">
+          </div>
+			<div class="col-xs-3">
+            <label  class="required" for="ex1">Interviewer Name</label>
+            <input class="form-control" id="ex2" type="text" placeHolder="Name">
+          </div>
+          <div class="col-xs-3">
+            <label  class="required" for="ex1">Tested Profile</label>
+
+<select class="form-control" id="sel1">
+    <option>Technical</option>
+    <option>Business</option>
+ <option>Both</option>
+  </select>
+          </div>
+        </div>
+        </br><div class="row">
+          <div class="col-xs-4">
+            <label class="required" for="ex2">Techincal Rating</label>
+            <div class="form-inline form-group ">
+              <input class=" col-xs-3" id="ex2" type="number" min="0" max ="10" placeHolder=""> &nbsp;
+              <label for="ex2"> /10</label>
+            </div>
+          </div>
+          <div class="col-xs-4">
+            <label class="required"  for="ex2">Personality Rating</label>
+            <div class="form-inline form-group ">
+             <input class=" col-xs-3" id="ex2" type="number" min="0" max ="10" placeHolder=""> &nbsp;
+              <label for="ex2"> /10</label>
+            </div>
+          </div>
+          <div class="col-xs-4">
+            <label class="required" for="ex2">Other Rating</label>
+            <div class="form-inline form-group ">
+                <input class=" col-xs-3" id="ex2" type="number" min="0" max ="10" placeHolder=""> &nbsp;
+              <label for="ex2"> /10</label>
+            </div>
+          </div>
+        </div>
+        </br><div class="row">
+         <div class="col-xs-8">
+                <label class="required" for="comment">Comments:</label>
+            <div class="form-group">       
+			<textarea class="form-control" rows="3" id="comment"></textarea>
+            </div>
+          </div>
+		  </div>
+		  <div class="row">
+		    <div class="col-xs-8">
+             <div class="checkbox">
+  <label><input type="checkbox" value="">Are you sure you want the candidate to move to next round </label>
+</div>
+            </div>		  
+		  </div>
+		  		  <div class="row">  <div class="col-xs-2"></div>
+				   <div class="col-xs-4"><button  style="width:130px; box-shadow: 3px 3px 1px #dcdcdc;" type="button" class="btn btn-danger">Reject</button></div>
+		 	    <div class="col-xs-4" ><button  style="width:130px;box-shadow: 3px 3px 1px #dcdcdc;" type="button" class="btn btn-success">Proceed</button></div>
+				
+		  </div>
+      </div>
+    </div>
+  </form>
+</div>
+<div class="container" style="width:1170px;" id="CandidateList">
+<h3>Candidates List </h3>
+  <div style="border :1px solid #DCDCDC ;border-radius:15px" class="well">
+  
+ <form>
+    <div class="form-group row">	<div class="col-sm-1">
+      <label for="lgFormGroupInput"  style ="text-align: center ; margin-top:7px;    margin-left: 9px;"class=" col-form-label col-form-label-lg">Email Id</label></div>
+      <div class="col-sm-5">
+        <input type="email" class="form-control form-control-lg" id="lgFormGroupInput" placeholder="search by Email ID">
+      </div>
+<button  style="width:130px; box-shadow: 3px 3px 1px #dcdcdc;" type="button" class="btn btn-primary">Go</button>
+<button  style="width:130px; box-shadow: 3px 3px 1px #dcdcdc;" type="button" class="btn btn-default"> Clear</button>
+    </div>   
+
+<a data-toggle="collapse" data-target="#filters">Additional Filters</a>
+<div class="addnFilter collapse " id ="filters" >
+<table style ="width : 1000px;">
+<tbody>
+<tr>
+<td>
+<label>First Name</label>
+</td><td><input type= "text" class="form-control" placeholder="First Name"></td>
+<td>
+<label>Last Name</label>
+</td><td><input type= "text" class="form-control" placeholder="Last Name"></td>
+<td>
+<label>Phone Number</label>
+</td><td><input type= "text" class="form-control" placeholder="Phone Number"></td>
+
+</tr>
+<tr><td> </TD><td> </TD><td> </TD><td> </TD><td> </TD><td> </TD><td> </TD></tr>
+<tr>
+<td><label>Round 1 &nbsp;</label> </td>
+    <td ><select class="form-control" id="sel1">
+    <option>Cleared</option>
+    <option>Failed</option>
+  </select></td>
+    <td ><label>Round 2 &nbsp;</label> </td>
+    <td ><select class="form-control" id="sel1">
+    <option>Cleared</option>
+    <option>Failed</option>
+  </select></td>
+    <td ><label>Round 3</label> </td>
+    <td ><select class="form-control" id="sel1">
+    <option>Cleared</option>
+    <option>Failed</option>
+  </select></td>
+    </tr>
+</tbody>
+</table><hr/>
+</div>
+<br/>
+        <table class="table table-fixed">
+          <thead>
+            <tr>
+              <th class="col-xs-2">First Name </th>
+                 <th class="col-xs-2">Last Name </th>
+                    <th class="col-xs-2">Email </th>
+                       <th class="col-xs-2">Round 1 </th>
+                          <th class="col-xs-2">Round 2</th>
+                             <th class="col-xs-2">Round 3 </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="col-xs-2">John</td>
+                <td class="col-xs-2">Doe</td>
+                  <td class="col-xs-2">john@example.com</td>
+                    <td class="col-xs-2">Cleared</td>
+                      <td class="col-xs-2">Cleared</td>  <td class="col-xs-2">Cleared</td>  
+            </tr>
+               <tr>
+              <td class="col-xs-2">John</td>
+                <td class="col-xs-2">Doe</td>
+                  <td class="col-xs-2">john@example.com</td>
+                    <td class="col-xs-2">Cleared</td>
+                      <td class="col-xs-2">Cleared</td>  <td class="col-xs-2">Cleared</td>  
+            </tr>   <tr>
+              <td class="col-xs-2">John</td>
+                <td class="col-xs-2">Doe</td>
+                  <td class="col-xs-2">john@example.com</td>
+                    <td class="col-xs-2">Cleared</td>
+                      <td class="col-xs-2">Cleared</td>  <td class="col-xs-2">Cleared</td>  
+            </tr>   <tr>
+              <td class="col-xs-2">John</td>
+                <td class="col-xs-2">Doe</td>
+                  <td class="col-xs-2">john@example.com</td>
+                    <td class="col-xs-2">Cleared</td>
+                      <td class="col-xs-2">Cleared</td>  <td class="col-xs-2">Cleared</td>  
+            </tr>   <tr>
+              <td class="col-xs-2">John</td>
+                <td class="col-xs-2">Doe</td>
+                  <td class="col-xs-2">john@example.com</td>
+                    <td class="col-xs-2">Cleared</td>
+                      <td class="col-xs-2">Cleared</td>  <td class="col-xs-2">Cleared</td>  
+            </tr>   <tr>
+              <td class="col-xs-2">John</td>
+                <td class="col-xs-2">Doe</td>
+                  <td class="col-xs-2">john@example.com</td>
+                    <td class="col-xs-2">Cleared</td>
+                      <td class="col-xs-2">Cleared</td>  <td class="col-xs-2">Cleared</td>  
+            </tr>
+               <tr>
+              <td class="col-xs-2">John</td>
+                <td class="col-xs-2">Doe</td>
+                  <td class="col-xs-2">john@example.com</td>
+                    <td class="col-xs-2">Cleared</td>
+                      <td class="col-xs-2">Cleared</td>  <td class="col-xs-2">Cleared</td>  
+            </tr>
+               <tr>
+              <td class="col-xs-2">John</td>
+                <td class="col-xs-2">Doe</td>
+                  <td class="col-xs-2">john@example.com</td>
+                    <td class="col-xs-2">Cleared</td>
+                      <td class="col-xs-2">Cleared</td>  <td class="col-xs-2">Cleared</td>  
+            </tr>   <tr>
+              <td class="col-xs-2">John</td>
+                <td class="col-xs-2">Doe</td>
+                  <td class="col-xs-2">john@example.com</td>
+                    <td class="col-xs-2">Cleared</td>
+                      <td class="col-xs-2">Cleared</td>  <td class="col-xs-2">Cleared</td>  
+            </tr>   <tr>
+              <td class="col-xs-2">John</td>
+                <td class="col-xs-2">Doe</td>
+                  <td class="col-xs-2">john@example.com</td>
+                    <td class="col-xs-2">Cleared</td>
+                      <td class="col-xs-2">Cleared</td>  <td class="col-xs-2">Cleared</td>  
+            </tr>   <tr>
+              <td class="col-xs-2">John</td>
+                <td class="col-xs-2">Doe</td>
+                  <td class="col-xs-2">john@example.com</td>
+                    <td class="col-xs-2">Cleared</td>
+                      <td class="col-xs-2">Cleared</td>  <td class="col-xs-2">Cleared</td>  
+            </tr>   <tr>
+              <td class="col-xs-2">John</td>
+                <td class="col-xs-2">Doe</td>
+                  <td class="col-xs-2">john@example.com</td>
+                    <td class="col-xs-2">Cleared</td>
+                      <td class="col-xs-2">Cleared</td>  <td class="col-xs-2">Cleared</td>  
+            </tr>   <tr>
+              <td class="col-xs-2">John</td>
+                <td class="col-xs-2">Doe</td>
+                  <td class="col-xs-2">john@example.com</td>
+                    <td class="col-xs-2">Cleared</td>
+                      <td class="col-xs-2">Cleared</td>  <td class="col-xs-2">Cleared</td>  
+            </tr>   <tr>
+              <td class="col-xs-2">John</td>
+                <td class="col-xs-2">Doe</td>
+                  <td class="col-xs-2">john@example.com</td>
+                    <td class="col-xs-2">Cleared</td>
+                      <td class="col-xs-2">Cleared</td>  <td class="col-xs-2">Cleared</td>  
+            </tr>   <tr>
+              <td class="col-xs-2">John</td>
+                <td class="col-xs-2">Doe</td>
+                  <td class="col-xs-2">john@example.com</td>
+                    <td class="col-xs-2">Cleared</td>
+                      <td class="col-xs-2">Cleared</td>  <td class="col-xs-2">Cleared</td>  
+            </tr>   <tr>
+              <td class="col-xs-2">John</td>
+                <td class="col-xs-2">Doe</td>
+                  <td class="col-xs-2">john@example.com</td>
+                    <td class="col-xs-2">Cleared</td>
+                      <td class="col-xs-2">Cleared</td>  <td class="col-xs-2">Cleared</td>  
+            </tr>   <tr>
+              <td class="col-xs-2">John</td>
+                <td class="col-xs-2">Doe</td>
+                  <td class="col-xs-2">john@example.com</td>
+                    <td class="col-xs-2">Cleared</td>
+                      <td class="col-xs-2">Cleared</td>  <td class="col-xs-2">Cleared</td>  
+            </tr>
+           
+          </tbody>
+        </table>
+
+	</div>
+<div class="container" style="width:1170px;" id="Stats">
+<h3>Statistics</h3>
+  <div style="border :1px solid #DCDCDC ;border-radius:15px" >
+ <div id="piechart" style="margin-left:10px; width: 900px; height: 500px;"></div>
+
+<label>
+<a href"#">Click Here for todays Detail Report</a></label>
+<br/>
+<label>
+<a href"#">Click Here for previous 5 Stats</a></label>
+<br/>
+<br/><br/>
+</div>
+</div>
+
+<div class="container" style="width:1170px;" id="Reports">
+<h3>Reports</h3>
+
+  <div style="border :1px solid #DCDCDC ;border-radius:15px" class="well" >
+<table style ="width : 1000px;">
+<tbody>
+<tr>
+<td>
+<label>From Date</label>
+</td><td><div >
+            <div class="form-group">
+                <div class='input-group date' id='datetimepicker1'>
+                    <input type='text' class="form-control" />
+                    <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                    </span>
+                </div></td>
+<td>
+<label>To Date</label>
+</td><td><div 
+            <div class="form-group">
+                <div class='input-group date' id='datetimepicker2'>
+                    <input type='text' class="form-control" />
+                    <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                    </span>
+                </div></td>
+                </div></td>
+<td>
+<label>Type</label>
+</td><td><select class="form-control" id="sel1">
+    <option>All</option>
+    <option>Selected</option>
+ <option>Rejected</option>
+  </select></td>
+<td><button  style="width:80px; box-shadow: 3px 3px 1px #dcdcdc;" type="button" class="btn btn-primary">Go</button></td>
+<td><button  style="width:70px; box-shadow: 3px 3px 1px #dcdcdc;" type="button" class="btn btn-default"> Clear</button></td>
+
+
+</tr></tbody></html>
+     <table class="table table-fixed">
+          <thead>
+            <tr>
+              <th class="col-xs-2">First Name </th>
+                 <th class="col-xs-2">Last Name </th>
+                    <th class="col-xs-2">Email </th>
+                       <th class="col-xs-2">Round 1 </th>
+                          <th class="col-xs-2">Round 2</th>
+                             <th class="col-xs-2">Round 3 </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="col-xs-2">John</td>
+                <td class="col-xs-2">Doe</td>
+                  <td class="col-xs-2">john@example.com</td>
+                    <td class="col-xs-2">Cleared</td>
+                      <td class="col-xs-2">Cleared</td>  <td class="col-xs-2">Cleared</td>  
+            </tr>
+               <tr>
+              <td class="col-xs-2">John</td>
+                <td class="col-xs-2">Doe</td>
+                  <td class="col-xs-2">john@example.com</td>
+                    <td class="col-xs-2">Cleared</td>
+                      <td class="col-xs-2">Cleared</td>  <td class="col-xs-2">Cleared</td>  
+            </tr>   <tr>
+              <td class="col-xs-2">John</td>
+                <td class="col-xs-2">Doe</td>
+                  <td class="col-xs-2">john@example.com</td>
+                    <td class="col-xs-2">Cleared</td>
+                      <td class="col-xs-2">Cleared</td>  <td class="col-xs-2">Cleared</td>  
+            </tr>   <tr>
+              <td class="col-xs-2">John</td>
+                <td class="col-xs-2">Doe</td>
+                  <td class="col-xs-2">john@example.com</td>
+                    <td class="col-xs-2">Cleared</td>
+                      <td class="col-xs-2">Cleared</td>  <td class="col-xs-2">Cleared</td>  
+            </tr>   <tr>
+              <td class="col-xs-2">John</td>
+                <td class="col-xs-2">Doe</td>
+                  <td class="col-xs-2">john@example.com</td>
+                    <td class="col-xs-2">Cleared</td>
+                      <td class="col-xs-2">Cleared</td>  <td class="col-xs-2">Cleared</td>  
+            </tr>   <tr>
+              <td class="col-xs-2">John</td>
+                <td class="col-xs-2">Doe</td>
+                  <td class="col-xs-2">john@example.com</td>
+                    <td class="col-xs-2">Cleared</td>
+                      <td class="col-xs-2">Cleared</td>  <td class="col-xs-2">Cleared</td>  
+            </tr>
+               <tr>
+              <td class="col-xs-2">John</td>
+                <td class="col-xs-2">Doe</td>
+                  <td class="col-xs-2">john@example.com</td>
+                    <td class="col-xs-2">Cleared</td>
+                      <td class="col-xs-2">Cleared</td>  <td class="col-xs-2">Cleared</td>  
+            </tr>
+               <tr>
+              <td class="col-xs-2">John</td>
+                <td class="col-xs-2">Doe</td>
+                  <td class="col-xs-2">john@example.com</td>
+                    <td class="col-xs-2">Cleared</td>
+                      <td class="col-xs-2">Cleared</td>  <td class="col-xs-2">Cleared</td>  
+            </tr>   <tr>
+              <td class="col-xs-2">John</td>
+                <td class="col-xs-2">Doe</td>
+                  <td class="col-xs-2">john@example.com</td>
+                    <td class="col-xs-2">Cleared</td>
+                      <td class="col-xs-2">Cleared</td>  <td class="col-xs-2">Cleared</td>  
+            </tr>   <tr>
+              <td class="col-xs-2">John</td>
+                <td class="col-xs-2">Doe</td>
+                  <td class="col-xs-2">john@example.com</td>
+                    <td class="col-xs-2">Cleared</td>
+                      <td class="col-xs-2">Cleared</td>  <td class="col-xs-2">Cleared</td>  
+            </tr>   <tr>
+              <td class="col-xs-2">John</td>
+                <td class="col-xs-2">Doe</td>
+                  <td class="col-xs-2">john@example.com</td>
+                    <td class="col-xs-2">Cleared</td>
+                      <td class="col-xs-2">Cleared</td>  <td class="col-xs-2">Cleared</td>  
+            </tr>   <tr>
+              <td class="col-xs-2">John</td>
+                <td class="col-xs-2">Doe</td>
+                  <td class="col-xs-2">john@example.com</td>
+                    <td class="col-xs-2">Cleared</td>
+                      <td class="col-xs-2">Cleared</td>  <td class="col-xs-2">Cleared</td>  
+            </tr>   <tr>
+              <td class="col-xs-2">John</td>
+                <td class="col-xs-2">Doe</td>
+                  <td class="col-xs-2">john@example.com</td>
+                    <td class="col-xs-2">Cleared</td>
+                      <td class="col-xs-2">Cleared</td>  <td class="col-xs-2">Cleared</td>  
+            </tr>   <tr>
+              <td class="col-xs-2">John</td>
+                <td class="col-xs-2">Doe</td>
+                  <td class="col-xs-2">john@example.com</td>
+                    <td class="col-xs-2">Cleared</td>
+                      <td class="col-xs-2">Cleared</td>  <td class="col-xs-2">Cleared</td>  
+            </tr>   <tr>
+              <td class="col-xs-2">John</td>
+                <td class="col-xs-2">Doe</td>
+                  <td class="col-xs-2">john@example.com</td>
+                    <td class="col-xs-2">Cleared</td>
+                      <td class="col-xs-2">Cleared</td>  <td class="col-xs-2">Cleared</td>  
+            </tr>   <tr>
+              <td class="col-xs-2">John</td>
+                <td class="col-xs-2">Doe</td>
+                  <td class="col-xs-2">john@example.com</td>
+                    <td class="col-xs-2">Cleared</td>
+                      <td class="col-xs-2">Cleared</td>  <td class="col-xs-2">Cleared</td>  
+            </tr>   <tr>
+              <td class="col-xs-2">John</td>
+                <td class="col-xs-2">Doe</td>
+                  <td class="col-xs-2">john@example.com</td>
+                    <td class="col-xs-2">Cleared</td>
+                      <td class="col-xs-2">Cleared</td>  <td class="col-xs-2">Cleared</td>  
+            </tr>
+           
+          </tbody>
+        </table>
+<button  style="width:150px; box-shadow: 3px 3px 1px #dcdcdc;" type="button" class="btn btn-primary"> Export to Excel </button>
+<button  style="width:150px; box-shadow: 3px 3px 1px #dcdcdc;" type="button" class="btn btn-sucess"> Send Invite Letters</button>
+</div>
+</div>
+</div>
+</div>
+</body>
+<script type="text/javascript">
+ $(function () {
+                $('#datetimepicker1').datetimepicker();   $('#datetimepicker2').datetimepicker();
+            });
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
+
+        var data = google.visualization.arrayToDataTable([
+          ['Task', 'Hours per Day'],
+          ['Waiting for Round 1',     11],
+          ['Waiting for Round 2',      2],
+          ['Waiting for Round 3',  2],
+          ['Selected', 2],
+          ['Rejected All',    7]
+        ]);
+
+        var options = {
+          title: 'Todays Stats'
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+        chart.draw(data, options);
+      }
+    </script>
+</html>
